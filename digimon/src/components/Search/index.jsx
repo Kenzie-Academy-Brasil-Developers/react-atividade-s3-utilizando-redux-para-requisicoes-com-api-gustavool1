@@ -2,9 +2,14 @@ import './style.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addDigimonThunk } from '../../store/modules/digimons/thunks'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 const Search = () =>{
+    toast.configure()
     const dispatch = useDispatch()
     const [ inputValue, setInputValue ] = useState('')
+    
     const handleClick = () =>{
         dispatch(addDigimonThunk(inputValue))
         setInputValue('')

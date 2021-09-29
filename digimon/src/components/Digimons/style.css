@@ -1,8 +1,11 @@
 
 .digimons{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .digimons ul{
+    padding: 0px;
     display: flex;
     flex-direction: column;
     list-style: none;
